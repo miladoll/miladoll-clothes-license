@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///e%3A/home/h_siobar/desktop/miladoll-clothes-license/markdown.css" type="text/css">
+</head>
+<body>
+<h1 id="%E3%83%9F%E3%83%A9%E3%83%89%E3%83%BC%E3%83%AB%E8%A1%A3%E8%A3%85%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9">ミラドール衣装ライセンス</h1>
+<blockquote>
+<p>最終更新：2019/02/14 V.1.1.1</p>
+</blockquote>
+<p>以下敬称略とします。各用語の定義は 2. 用語の定義 をお読みください</p>
+<h2 id="%E5%89%8D%E6%96%87">前文</h2>
+<p>ドール衣装工房ミラドールでは、手にとってくださった方が最大限自由に楽しんでいただけるよう、以下のとおり衣装の「ライセンス」（使用上のお約束）を明示しております。</p>
+<p>ミラドールの作品については以下条項の「自由」をお約束し、「できないこと」「マナー」に過剰な配慮をせずともお客さまが楽しめるようにいたします。</p>
+<div class="honmon">
+<h2 id="1-%E6%9D%A1%E9%A0%85">1. 条項</h2>
+<ol>
+<li>オーナーが取得した作品の所有・使用権はすべてオーナーに帰属します。ミラドールは法的に根拠なく作品の回収・撤去を要求する権利を有しません</li>
+<li>オーナーは以下のような活動を、営利・非営利の別問わず事前・事後のミラドールへのお問合せ・ご報告や制作元名の表記なく、自由におこなうことができます：
+<ul>
+<li>写真そのほかの撮影およびその発表・展示</li>
+<li>二次利用した創作・制作およびその発表・展示</li>
+</ul>
+</li>
+<li>オーナーは以下のような行為（以降「カスタマイズ」と呼称）を、営利・非営利の別問わず事前・事後のミラドールへのお問合せ・ご報告や制作元名の表記なく、自由におこなうことができます。ただしカスタマイズによる損傷などへの補償はミラドールではおこないません：
+<ul>
+<li>加工・分解・染色</li>
+<li>頒布時想定以外の組み合わせでの着こなし</li>
+<li>非推奨ボディなどでの着用</li>
+</ul>
+</li>
+<li>ただし以下のような行為は法に触れることがあります。ご遠慮ください
+<ul>
+<li>別人・別団体の制作物と称して再頒布すること</li>
+<li>カスタマイズした作品を「ミラドール製」と表記して再頒布すること</li>
+<li>作品意匠全体を複製・頒布すること</li>
+<li>意図的に作品を損傷・破壊せしめ、原著作者の人格・名誉を著しく損ねること</li>
+</ul>
+</li>
+<li>このライセンスは当文書が添付されている、または、対象とすることをミラドールが宣言している衣装に対し適用されます。なお、ミラドールが制作に参加・協力しているだけの他者作品に対しては一切適用されません</li>
+<li>このライセンスは随時更新されます
+<ul>
+<li>最新版は <a href="https://github.com/miladoll/miladoll-clothes-license">https://github.com/miladoll/miladoll-clothes-license</a> およびミラドールWebサイトで公開されます</li>
+<li>オーナーは、所有する作品の購入時に提示されたもの・最新版、いずれか有利なほうを選択して利用することができます</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-%E7%94%A8%E8%AA%9E%E3%81%AE%E5%AE%9A%E7%BE%A9">2. 用語の定義</h2>
+<p>規約中文言の定義は以下のとおりです：</p>
+<ul>
+<li>オーナー<br>
+対象作品の正当な所有権・使用権を該当時点で最終的に保持している人物</li>
+<li>ミラドール<br>
+ドール衣装工房ミラドール（<a href="https://miladoll.jp">https://miladoll.jp</a>）。「MILA DOLL」「MILADOLL」とも記述することがあります</li>
+<li>制作元<br>
+ミラドール</li>
+<li>発表・展示<br>
+静物展示、Twitterなどインターネットでの公衆送信、印刷物の制作・出版、映像制作・放送など一切の発表に類する行為</li>
+</ul>
+<h2 id="3-%E9%99%84%E5%89%87">3. 附則</h2>
+<p>本ライセンス文をそのまま、もしくは一部改変のうえ利用することに関してミラドールは著作権の行使を放棄します。自由にお使いください。ただし、使用の際はライセンス元名義を「ミラドール」から使用者名義に変えてください</p>
+</div>
+<h2 id="%E6%94%B9%E7%89%88%E5%B1%A5%E6%AD%B4">改版履歴</h2>
+<ul>
+<li>2019/02/14 V.1.1.1
+<ul>
+<li>フィニッシュ</li>
+</ul>
+</li>
+<li>2019/02/06 V.1.0.9（仮）
+<ul>
+<li>改正著作権法施行に伴う見直し。文言の明確化</li>
+</ul>
+</li>
+<li>2017/11/12 V.1.0.3</li>
+</ul>
+
+</body>
+</html>
